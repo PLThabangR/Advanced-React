@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Dessert from './Rendering/Dessert'
 import './App.css'
 import Map from './Rendering/Map'
 function App() {
@@ -9,6 +8,7 @@ function App() {
   return (
     <>
      <Map/>
+     <Dessert/>
       
     </>
   )
