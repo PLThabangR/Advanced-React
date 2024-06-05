@@ -4,6 +4,7 @@ import './App.css'
 import Map from './Rendering/Map'
 import Hooks from './hooks/Hooks'
 import Bookings from './forms/Bookings'
+import Goal from './hooks/Goal'
 //import UserProvider from './ContextApi/UserProvider'
 
 
@@ -19,6 +20,7 @@ function App() {
      <Dessert/>
      <Bookings/>
      <Hooks/>
+     <Goal/>
       
     </>
     
