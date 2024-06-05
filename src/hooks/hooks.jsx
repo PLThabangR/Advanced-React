@@ -2,14 +2,27 @@ import { useState } from "react";
  import React from 'react'
  
  const hooks = () => {
-    const [greeting, setGreeting] = useState({ greet: "Hello, World" }); 
+    const [greeting, setGreeting] = useState({ greet: "Hello, World",Place: "Earth" }); 
     console.log(greeting, setGreeting); 
   
     const [greetingString, setGreetingString] = useState(""); 
     console.log(greetingString, setGreetingString); 
    
+    //Update only a specific property in the object
+    function updateGreeting() { 
+        setGreeting(prevState => { 
+            return {...prevState, place: "World-Wide Web"} 
+        }); 
+      } 
+
+      
+
     function updateGreetingObject() { 
-      setGreeting({ greet: "Hello, World-Wide Web" }); 
+        //Correct way to update a state
+        const newGreeting = {...greeting}; 
+    newGreeting.greet = "Hello, World-Wide Web";
+    setGreeting(newGreeting);
+      //setGreeting({ greet: "Hello, World-Wide Web" }); 
     } 
     function updateGreetingString() { 
         setGreetingString("Hello, World-Wide Web from string" ); 
