@@ -26,12 +26,42 @@ return (
 
 }//End of Goal form
 
+//List of Goal function
+function ListOfGoals(props){
+
+
+    return(
+        <>
+        <div>
+        <ul>
+         
+        {props.allGoals.map( (g)=>
+        <li>
+        <span>My goal is to {g.goal}, by {g.by}</span>
+        </li>
+
+        )}
+
+        </ul>
+
+        </div>
+        </>
+    )
+}
 
 
 
 const Goal = () => {
+    const [allGoals,updateGoals]= useState([])
+    function addGoal(goal){
+        updateGoals([...allGoals,goal])
+    }
   return (
-    <div>Goal</div>
+    <>
+    <GoalForm onAdd={addGoal}/>
+    <ListOfGoals allGoals={allGoals}/>
+    
+    </>
   )
 }
 
