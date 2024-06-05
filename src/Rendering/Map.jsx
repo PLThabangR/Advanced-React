@@ -1,5 +1,5 @@
 import React from 'react'
-
+//import useUser from '../ContextApi/UserProvider'
 const desertList = [
     {
         id:'1',
@@ -23,8 +23,14 @@ const desertList = [
         title:"Tiramusic",
         description:"Unexplored flavour",
         price:"$10.50" },]
+//Importing the context hook
+//const {user} = useUser();
 
 
+
+//  const results = user.map((data,index) =>(
+//     <h2 key={index}>{data}</h2>
+//  ))
 
 const Map = () => {
     const listItems = desertList.map(dessert =>{
@@ -35,6 +41,8 @@ const Map = () => {
     <div >
         <ul>
             {listItems}
+            
+
         </ul>
 
     </div>
