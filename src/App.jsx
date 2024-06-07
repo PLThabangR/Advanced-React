@@ -5,6 +5,7 @@ import Map from './Rendering/Map'
 import Hooks from './hooks/Hooks'
 import Bookings from './forms/Bookings'
 import Goal from './hooks/Goal'
+import UseReducer from './hooks/UseReducer'
 //import UserProvider from './ContextApi/UserProvider'
 
 
@@ -21,7 +22,7 @@ function App() {
      <Bookings/>
      <Hooks/>
      <Goal/>
-      
+    <UseReducer/>
     </>
     
   )
